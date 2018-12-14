@@ -1,0 +1,33 @@
+Source used for This tutorial:
+# https://www.liquidweb.com/kb/install-docker-ubuntu-16-04/
+
+Docker Versions
+There are three versions of Docker available, each with its own unique use:
+
+Docker CE is the simple, classic Docker Engine.
+Docker EE is Docker CE with certification on some systems and support by Docker Inc.
+Docker CS (Commercially Supported) is kind of the old bundle version of Docker EE for versions <= 1.13.Prerequisities:
+
+Now I am installing using Docker CE version:
+
+1) we need to have 64 bit OS.
+2) should be logged as root user.
+3) Linux kernel should be 3.10 or above.
+
+Commands after logging into Ubuntu machine
+1) sudo apt-get update
+2) apt-get install curl apt-transport-https ca-certificates software-properties-common   //For installing Required packages before installing docker.
+3) curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -    //For adding Docker official GPG key
+4) add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable" | tee /etc/apt/sources.list.d/docker.list  // Adding APt source for installing
+5) apt-get update   //Running again so that docker packages are recognised now before installing
+6) apt-cache policy docker-ce  //To verify whether we are using correct repo or not.
+7) apt-get install -y docker-ce  //Command to install docker.
+8) systemctl status docker //For checking status of docker.
+9) Few important commands:
+(i) docker -v
+(ii)docker --version
+(iii)docker -info
+(iv)docker run hello-world  //for running basic docker container from docker hub
+
+If getting exception: Cannot connect to docker dameon, Run this.
+10)sudo service docker start

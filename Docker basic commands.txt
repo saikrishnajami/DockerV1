@@ -1,0 +1,65 @@
+Docker Terminologies:::::::
+Docker Images:
+Docker images are templates used to create docker containers.
+Docker Containers:
+These are run ning instances of docker images.
+Docker file:
+Docker file contains instructions for running softwares and apps as packages.
+Docker compose:
+Same as docker file. But docker file can create 1 app with 1 container..
+Docker compose can create 1 app using multiple containers.Basic commands of docker.
+1) docker --version
+2) docker -v
+3) docker //you will get multiple options after this.
+4) docker info  //for getting detailed info of this
+5) docker images //for getting images which we have currently.
+6) docker ps //to get the running containers.
+7) docker ps -a //to list out all the containers.
+8) docker run hello-world  //For running images from dockerhub even if we dont have locally.
+9) sudo service docker start  //To start docker.
+10) sudo service docker stop  //to stop  //status for status.
+11) sudo apt-get remove docker //for removing docker //yum remove docker(for linux)
+12) docker pull jenkins  //For pulling jenkins image from dockerhub
+13) docker images -q //For getting id of images
+14) docker images -a //For getting complete info of images.
+15) docker rmi -f imagename  //for deleting image
+16) docker run -it imagename  //for interactive seesion after running image.
+17) docker start containername //for starting container
+18) docker stop container name //for stopping the container.
+19) docker system prune -a //for removing unused images
+20) docker inspect image name  //for detailed info of image.
+21) docker run --name MyJenkins -p 8080:8080 -p 50000:50000 -it jenkins  //For running jenkins image
+
+
+
+Organised way of commands
+
+BASIC:::::
+
+docker version
+docker -v
+docker info
+docker --help
+docker login  //For logging into dockerhub
+
+
+IMAGES:::::
+
+docker images
+docker pull
+docker rmi
+
+
+Containers::::
+
+docker ps
+docker run
+docker start
+docker stop
+
+SYSTEM:::::
+docker stats
+docker system df
+docker system prune
+
+ 
